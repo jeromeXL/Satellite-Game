@@ -3,6 +3,8 @@ package unsw.blackout.Entity.Satellite;
 import unsw.utils.Angle;
 
 public class TeleportingSatellite extends Satellite {
+
+    boolean positiveDirection = true;
     
     // Constructor
     public TeleportingSatellite(String satelliteId, String type, Angle position, double height) {
@@ -17,4 +19,40 @@ public class TeleportingSatellite extends Satellite {
         this.setByteLimit(200);
     }
 
+    // Getter 
+    public boolean getPositiveDirection() {
+        return positiveDirection;
+    }
+
+    // Setter
+    public void setPositiveDirection(boolean positiveDirection) {
+        this.positiveDirection = positiveDirection;
+    }
+
+    // Movement 
+    public void movement() {
+        double angularVelocity = this.getAngularVelocity();
+        Angle currentAngle = this.getPosition();
+        
+        if (this.getPositiveDirection() == true) {
+            Angle nextAngle = currentAngle.add(Angle.fromRadians(angularVelocity));
+            if (nextAngle.toDegrees() >= 180) {
+                this.setPosition(Angle.fromRadians(0));
+                this.setPositiveDirection(false);
+            } else {
+                this.setPosition(currentAngle.add(Angle.fromRadians(angularVelocity)));
+            }
+        } 
+        
+        else { 
+            Angle nextAngle = currentAngle.subtract(Angle.fromRadians(angularVelocity));
+            if (nextAngle.toDegrees() <= 180) {
+                this.setPosition(Angle.fromRadians(0));
+                this.setPositiveDirection(true);
+            } else {
+                this.setPosition(currentAngle.subtract(Angle.fromRadians(angularVelocity)));
+            }
+        }
+        
+    }
 }

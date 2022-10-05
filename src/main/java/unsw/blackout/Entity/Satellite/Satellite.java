@@ -51,4 +51,14 @@ public class Satellite extends Entity {
         this.byteLimit = newByteLimit;
     }
 
+    // Movement
+    public double getAngularVelocity() {
+        double angularVelocity = this.getLinearSpeed() / this.getHeight();
+        return angularVelocity;
+    }
+
+    public void movement() {
+        // Polymorphism - Every subclass of Satellite has different movement patterns
+    }
+
 }

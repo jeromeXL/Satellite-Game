@@ -27,11 +27,9 @@ public class BlackoutController {
         Device device = null;
         if (type.equals("HandheldDevice")) {
             device = new HandheldDevice(deviceId, type, position);
-        } 
-        else if (type.equals("LaptopDevice")) {
+        } else if (type.equals("LaptopDevice")) {
             device = new LaptopDevice(deviceId, type, position);
-        } 
-        else if (type.equals("DesktopDevice")) {
+        } else if (type.equals("DesktopDevice")) {
             device = new DesktopDevice(deviceId, type, position);
         }
         Devices.put(deviceId, device);
@@ -67,7 +65,6 @@ public class BlackoutController {
         for (String deviceId : Devices.keySet()) {
             deviceIds.add(deviceId);
         }
-
         return deviceIds;
     }
 
@@ -78,7 +75,6 @@ public class BlackoutController {
         for (String satelliteId : Satellites.keySet()) {
             satelliteIds.add(satelliteId);
         }
-
         return satelliteIds;
     }
 
@@ -120,6 +116,9 @@ public class BlackoutController {
 
     public void simulate() {
         // TODO: Task 2a)
+        for (Satellite satellite: Satellites.values()) {
+            satellite.movement();
+        }
     }
 
     /**

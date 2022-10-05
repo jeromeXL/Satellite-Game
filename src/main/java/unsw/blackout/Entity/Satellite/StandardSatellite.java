@@ -16,4 +16,11 @@ public class StandardSatellite extends Satellite {
         this.setFileLimit(3);
         this.setByteLimit(80);
     }
+
+    // Movement 
+    public void movement() {
+        double angularVelocity = this.getAngularVelocity();
+        Angle currentAngle = this.getPosition();
+        this.setPosition(currentAngle.subtract(Angle.fromRadians(angularVelocity)));
+    }
 }
