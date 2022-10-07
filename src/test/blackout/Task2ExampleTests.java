@@ -183,3 +183,17 @@ public class Task2ExampleTests {
         assertTrue(controller.getInfo("Satellite1").getPosition().toDegrees() % 360 == 0);
     }
 }
+
+
+// Plans for Extra tests 
+
+// Test simulate by running the simulation and checking that standard satellite moved to right position
+
+// Test teleporting satellite by simulating until it is about to cross 180 and then check that it teleports to 0
+// Then check that the direction has been reversed
+
+// Test relay by starting it at angle 345 to see that it takes positive direction towards 140
+
+// Test relay by starting it as angle 344 to see that it takes negative direction towards 190
+
+// Test relay to check that after passing 140 or 190, it changes directon 

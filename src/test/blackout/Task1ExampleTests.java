@@ -80,3 +80,19 @@ public class Task1ExampleTests {
         assertEquals(new EntityInfoResponse("DeviceC", Angle.fromDegrees(330), RADIUS_OF_JUPITER, "DesktopDevice", expected), controller.getInfo("DeviceC"));
     }
 }
+
+// Plans for extra tests 
+
+// Extra test for creating 1 device and removing the device
+
+// Extra test for creating 1 satellite and removing the satellite
+
+// Extra test for creating 3 devices and listing them all 
+
+// Extra test for creating 3 satellite and listing them all 
+
+// Extra test for adding a file to a device and checking
+
+// Extra test for getting device information 
+
+// Extra test for getting satellite information
