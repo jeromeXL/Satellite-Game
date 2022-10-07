@@ -133,7 +133,9 @@ public class BlackoutController {
 
     public List<String> communicableEntitiesInRange(String id) {
         // TODO: Task 2 b)
-        return new ArrayList<>();
+
+        Communication communication = new Communication(id, Devices, Satellites);
+        return communication.getCommunicableEntities();
     }
 
     public void sendFile(String fileName, String fromId, String toId) throws FileTransferException {

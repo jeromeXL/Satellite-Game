@@ -58,7 +58,9 @@ public class Satellite extends Entity {
     }
 
     public void movement() {
-        // Polymorphism - Every subclass of Satellite has different movement patterns
+        double angularVelocity = this.getAngularVelocity();
+        Angle currentAngle = this.getPosition();
+        this.setPosition(currentAngle.subtract(Angle.fromRadians(angularVelocity)));
     }
 
 }
