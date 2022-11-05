@@ -1,0 +1,6 @@
+Domain Modelling - Excellent, only minor errors present with the diagram (e.g. missing cardinalities, and next time you're better off leaving in progress stuff out of the diagram but I didn't deduct for that)
+Coupling and Cohesion - Good, can't go higher without file transfer
+Code Quality - Satisfactory
+Linting - Minimally
+Blogging - Excellent
+Testing - Undemonstrated
