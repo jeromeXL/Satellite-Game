@@ -1,4 +1,4 @@
-# Satellite Game 
+# Satellite Simulation 
 
 A great deal of today's technology uses satellites which orbit the Earth in one way or another. For example, tagging photographs with their location, telecommunications, and even missile control systems. There are currently 4,550 active satellites (as of 2022) orbiting the Earth all together.
 
